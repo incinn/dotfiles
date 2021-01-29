@@ -12,7 +12,7 @@ alias count='find . -type f | wc -l'
 alias cpv='rsync -ah --info=progress2'
 alias mountls='mount | grep -E ^/dev | column -t'
 
-alias update='sudo apt-get update && sudo apt-get upgrade'
+alias update='sudo apt update && sudo apt upgrade'
 
 alias gh='history|grep'
 
@@ -21,6 +21,3 @@ alias ports='netstat -tulanp'
 if [ -f ~/.bash_aliases_private ]; then
     . ~/.bash_aliases_private
 fi
-
-alias bash-reload='. ~/.bashrc'
-
