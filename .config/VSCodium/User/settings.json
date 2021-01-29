@@ -1,0 +1,9 @@
+{
+    "workbench.editor.enablePreview": false,
+    "editor.renderWhitespace": "all",
+    "editor.wordWrap": "on",
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.iconTheme": "material-icon-theme",
+    "path-intellisense.showHiddenFiles": true,
+    "window.zoomLevel": 0
+}
