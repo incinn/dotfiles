@@ -12,7 +12,8 @@ alias count='find . -type f | wc -l'
 alias cpv='rsync -ah --info=progress2'
 alias mountls='mount | grep -E ^/dev | column -t'
 
-alias update='sudo apt update && sudo apt upgrade'
+alias update='sudo apt update && sudo apt list --upgradable'
+alias upgrade='sudo apt upgrade'
 
 alias gh='history|grep'
 
