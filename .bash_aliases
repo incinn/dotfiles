@@ -6,6 +6,7 @@ alias ..='cd ..'
 alias c='clear'
 
 alias grep='grep --color=auto'
+alias open="xdg-open"
 
 alias left='ls -t -1 --color=auto'
 alias count='find . -type f | wc -l'
