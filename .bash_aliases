@@ -20,7 +20,7 @@ alias cpv='rsync -ah --info=progress2'
 alias mountls='mount | grep -E ^/dev | column -t'
 
 alias update='sudo apt update && sudo apt list --upgradable'
-alias upgrade='sudo apt upgrade'
+alias upgrade='sudo apt upgrade -y'
 
 alias gh='history|grep'
 
