@@ -1,8 +1,8 @@
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
-alias homestead-up='cd ~/Homestead && vagrant up'
-alias homestead-down='cd ~/Homestead && vagrant halt'
-alias homestead-ssh='cd ~/Homestead && vagrant ssh'
+alias homestead-up='cd ~/Homestead && vagrant up && cd -'
+alias homestead-down='cd ~/Homestead && vagrant halt && cd -'
+alias homestead-ssh='cd ~/Homestead && vagrant ssh && cd -'
 
 alias et='firejail ~/Documents/et/et-sdl-sound'
 
