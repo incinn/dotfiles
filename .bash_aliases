@@ -4,7 +4,7 @@ alias homestead-up='cd ~/Homestead && vagrant up && cd -'
 alias homestead-down='cd ~/Homestead && vagrant halt && cd -'
 alias homestead-ssh='cd ~/Homestead && vagrant ssh && cd -'
 
-alias et='firejail ~/Documents/et/et-sdl-sound'
+alias et='firejail ~/Documents/et/et-sdl-sound +connect clan-etc.de'
 
 alias ll='ls -la --color=auto --human-readable'
 alias lt='ls --human-readable --size -1 -S --classify --color=auto'
