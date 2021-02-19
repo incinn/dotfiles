@@ -9,5 +9,19 @@
     "terminal.integrated.shell.linux": "/bin/zsh",
     "workbench.editor.wrapTabs": true,
     "workbench.editor.decorations.badges": true,
-    "workbench.editor.decorations.colors": true
+    "workbench.editor.decorations.colors": true,
+    "editor.wordWrapColumn": 50,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "eslint.format.enable": true,
+    "intelephense.phpdoc.functionTemplate": {
+    
+        "summary": "$1",
+        "tags": [
+            "@param ${1:$SYMBOL_TYPE} $SYMBOL_NAME $2",
+            "@return ${1:$SYMBOL_TYPE} $2",
+            "@throws ${1:$SYMBOL_TYPE} $2"
+        ]
+    }
 }
