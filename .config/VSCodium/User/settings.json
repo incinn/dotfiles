@@ -23,5 +23,20 @@
             "@return ${1:$SYMBOL_TYPE} $2",
             "@throws ${1:$SYMBOL_TYPE} $2"
         ]
-    }
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur"
+    },
+    "prettier.singleQuote": true,
+    "prettier.tabWidth": 4,
+    "prettier.vueIndentScriptAndStyle": true,
+    "vetur.validation.templateProps": true,
+    "vetur.useWorkspaceDependencies": true,
+    "vetur.format.styleInitialIndent": true,
+    "vetur.format.scriptInitialIndent": true,
+    "vetur.format.options.tabSize": 4,
+    "vetur.experimental.templateInterpolationService": true,
+    "intelephense.format.braces": "k&r",
+    "intelephense.phpdoc.textFormat": "text",
+    "intelephense.telemetry.enabled": false
 }
