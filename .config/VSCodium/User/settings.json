@@ -38,5 +38,12 @@
     "vetur.experimental.templateInterpolationService": true,
     "intelephense.format.braces": "k&r",
     "intelephense.phpdoc.textFormat": "text",
-    "intelephense.telemetry.enabled": false
+    "intelephense.telemetry.enabled": false,
+    "window.titleBarStyle": "custom",
+    "editor.cursorBlinking": "phase",
+    "editor.cursorStyle": "block",
+    "terminal.integrated.cursorBlinking": true,
+    "editor.cursorSmoothCaretAnimation": true,
+    "search.seedWithNearestWord": true,
+    "problems.showCurrentInStatus": true
 }
