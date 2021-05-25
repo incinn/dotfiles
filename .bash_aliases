@@ -31,3 +31,10 @@ alias kbfix='echo 0 | sudo tee /sys/module/hid_apple/parameters/fnmode && echo 0
 if [ -f ~/.bash_aliases_private ]; then
     . ~/.bash_aliases_private
 fi
+
+startup() {
+	echo "Running startup..."
+	kbfix
+	vpn-connect
+	update
+}
