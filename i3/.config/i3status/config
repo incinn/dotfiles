@@ -8,13 +8,11 @@
 
 general {
         colors = true
-        interval = 5
+        interval = 1
 }
 
 order += "ethernet _first_"
 order += "disk /"
-order += "load"
-order += "memory"
 order += "tztime local"
 
 wireless _first_ {
@@ -23,8 +21,8 @@ wireless _first_ {
 }
 
 ethernet _first_ {
-        format_up = "E: %ip (%speed)"
-        format_down = "E: down"
+        format_up = "%ip"
+        format_down = "DOWN"
 }
 
 battery all {
@@ -46,5 +44,5 @@ memory {
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+        format = "%A %d %B %Y - %H:%M:%S "
 }
