@@ -187,6 +187,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# desktop background
+exec --no-startup-id nitrogen --restore
+
 # Dracular theme
 # class                 border  bground text    indicator child_border
 client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
