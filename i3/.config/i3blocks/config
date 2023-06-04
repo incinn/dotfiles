@@ -43,6 +43,19 @@ interval=2
 INLABEL= 
 OUTLABEL= 
 
+[mediaplayer]
+label= 
+command=$SCRIPT_DIR/mediaplayer
+instance=spotify
+interval=5
+signal=10
+separator=false
+
+[volume]
+label= 
+interval=once
+signal=10
+
 [memory]
 label=󰧑 
 interval=30
@@ -61,10 +74,7 @@ separator=false
 label=
 interval=5
 
-[volume]
-label= 
-interval=once
-signal=10
+
 
 [calendar]
 command=$SCRIPT_DIR/calendar
