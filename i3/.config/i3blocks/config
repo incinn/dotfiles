@@ -102,7 +102,6 @@ command=$SCRIPT_DIR/calendar
 interval=1
 LABEL=  
 DATEFMT=+%A %d %B %H:%M:%S
-BLOCK_Y=0
 
 # Date Time
 #

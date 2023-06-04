@@ -5,6 +5,9 @@ HEIGHT=${HEIGHT:-200}
 DATEFMT=${DATEFMT:-"+%a %d.%m.%Y %H:%M:%S"}
 SHORTFMT=${SHORTFMT:-"+%H:%M:%S"}
 
+BLOCK_X=99
+BLOCK_Y=-1034
+
 OPTIND=1
 while getopts ":f:W:H:" opt; do
     case $opt in
