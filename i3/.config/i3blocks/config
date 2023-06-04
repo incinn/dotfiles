@@ -27,7 +27,7 @@
 # Change $SCRIPT_DIR to the location of your scripts!
 
 command=$SCRIPT_DIR/$BLOCK_NAME
-separator_block_width=15
+separator_block_width=20
 markup=none
 
 [keyindicator]
