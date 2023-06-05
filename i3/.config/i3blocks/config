@@ -33,13 +33,13 @@ markup=none
 [keyindicator]
 KEY=CAPS
 markup=pango
-interval=5
+interval=3
 signal=11
 TEXT_OFF= 
 separator=false
 
 [bandwidth]
-interval=2
+interval=1
 INLABEL= 
 OUTLABEL= 
 
@@ -49,7 +49,6 @@ command=$SCRIPT_DIR/mediaplayer
 instance=spotify
 interval=5
 signal=10
-separator=false
 
 [volume]
 label= 
@@ -57,13 +56,13 @@ interval=once
 signal=10
 
 [memory]
-label=󰧑 
-interval=30
+label= 
+interval=10
 PERCENT=false
 
 [cpu_usage]
 label= 
-interval=5
+interval=2
 min_width=99%
 T_WARN=50
 T_CRIT=80
@@ -72,9 +71,7 @@ separator=false
 
 [temperature]
 label=
-interval=5
-
-
+interval=2
 
 [calendar]
 command=$SCRIPT_DIR/calendar
@@ -82,8 +79,6 @@ interval=1
 LABEL=  
 DATEFMT=+%A %d %B %H:%M:%S
 
-# Date Time
-#
 #[time]
 #command=date +'%A %d %B %H:%M:%S'
 #label=  
