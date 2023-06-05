@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if ! utilization=$(nvidia-smi --format=nounits,csv,noheader --query-gpu=utilization.gpu | xargs echo); then
+    utilization=0
+fi
+if [ "$utilization" -gt 0 ]; then
+    echo "$utilization%"
+else
+    echo ""
+fi

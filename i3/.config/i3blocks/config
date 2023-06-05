@@ -76,6 +76,16 @@ COLOR_CRIT=#ff5555
 label=
 interval=2
 
+[gpu_usage]
+label= 
+interval=2
+min_width=100%
+separator=false
+
+[gpu_temp]
+label=
+interval=2
+
 [calendar]
 command=$SCRIPT_DIR/calendar
 interval=1
