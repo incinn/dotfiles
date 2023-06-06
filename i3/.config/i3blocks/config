@@ -39,7 +39,7 @@ TEXT_OFF=
 separator=false
 
 [bandwidth]
-interval=1
+interval=2
 INLABEL= 
 OUTLABEL= 
 
@@ -57,13 +57,13 @@ signal=10
 
 [memory]
 label= 
-interval=10
+interval=5
 PERCENT=false
 
 [cpu_usage]
 label= 
 interval=2
-min_width=99%
+min_width=100%
 T_WARN=50
 T_CRIT=80
 DECIMALS=0
