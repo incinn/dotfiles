@@ -1,7 +1,0 @@
-# Dependencies
-`yay -S stow git`
-
-# Stow
-Clone directory into `~/.dotfiles`
-
-`stow *`
