@@ -30,13 +30,10 @@ command=$SCRIPT_DIR/$BLOCK_NAME
 separator_block_width=20
 markup=none
 
-[temperature]
-label=  
-interval=2
-
-[gpu_temp]
-label= 
-interval=2
+[volume]
+label= 
+interval=once
+signal=10
 
 [time]
 command=date +'%H:%M:%S'
