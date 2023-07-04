@@ -215,9 +215,11 @@ hide_edge_borders both
 # finds out, if available)
 bar {
   output DP-0
+  output VIRTUAL-CENTER
   position top
   status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks
   padding 0px 5px 0px 0px
+  tray_output none
   tray_padding 2px
   separator_symbol ""
 
@@ -239,6 +241,7 @@ bar {
   position top
   status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks -c ~/.config/i3blocks/config-left
   padding 0px 5px 0px 0px
+  tray_output none
   tray_padding 2px
   separator_symbol ""
 
@@ -260,6 +263,7 @@ bar {
   position top
   status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks -c ~/.config/i3blocks/config-right
   padding 0px 5px 0px 0px
+  tray_output VIRTUAL-RIGHT
   tray_padding 2px
   separator_symbol ""
 
