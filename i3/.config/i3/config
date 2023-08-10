@@ -14,6 +14,9 @@ exec --no-startup-id dex --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
+# Use nitrogen to restore desktop background
+exec --no-startup-id nitrogen --restore
+
 # Start Vota daemonized to handle scheduled backups using borg
 exec --no-startup-id vorta -d
 
@@ -42,9 +45,6 @@ bindsym $mod+q kill
 
 # Start rofi
 bindsym $mod+d exec --no-startup-id rofi -show drun
-
-# desktop background
-exec --no-startup-id nitrogen --restore
 
 # Change focus
 # bindsym $mod+j focus left
