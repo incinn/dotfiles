@@ -153,12 +153,14 @@ require('lazy').setup({
   },
 
   {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
+    'maxmx03/dracula.nvim',
+    lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'onedark'
-    end,
+      local dracula = require 'dracula'
+      dracula.setup()
+      vim.cmd.colorscheme 'dracula'
+    end
   },
 
   {
