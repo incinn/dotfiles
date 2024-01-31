@@ -7,6 +7,10 @@ font pango:JetBrainsMono Nerd Font 9
 # Run custom monitor setup script
 exec --no-startup-id ~/.config/i3/monitors.sh
 
+# Disable display power management and screen blanking
+# https://wiki.archlinux.org/title/Display_Power_Management_Signaling
+exec --no-startup-id xset s off -dpms
+
 # Use dex to autostart .desktop files in ~/.config/autostart/
 exec --no-startup-id dex --autostart --environment i3
 
