@@ -167,7 +167,6 @@ hide_edge_borders both
 
 # Bar definitions for virtual monitors
 bar {
-  output DP-0
   output VIRTUAL-CENTER
   position top
   status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks
@@ -190,7 +189,73 @@ bar {
 }
 
 bar {
+  output VIRTUAL-PBP-LEFT
+  position top
+  status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks
+  padding 0px 5px 0px 0px
+  tray_output none
+  tray_padding 2px
+  separator_symbol ""
+
+  colors {
+    background #282A36
+    statusline #F8F8F2
+    separator  #44475A
+
+    focused_workspace  #44475A #44475A #F8F8F2
+    active_workspace   #282A36 #44475A #F8F8F2
+    inactive_workspace #282A36 #282A36 #BFBFBF
+    urgent_workspace   #FF5555 #FF5555 #F8F8F2
+    binding_mode       #FF5555 #FF5555 #F8F8F2
+  }
+}
+
+bar {
+  output VIRTUAL-PBP
+  position top
+  status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks
+  padding 0px 5px 0px 0px
+  tray_output none
+  tray_padding 2px
+  separator_symbol ""
+
+  colors {
+    background #282A36
+    statusline #F8F8F2
+    separator  #44475A
+
+    focused_workspace  #44475A #44475A #F8F8F2
+    active_workspace   #282A36 #44475A #F8F8F2
+    inactive_workspace #282A36 #282A36 #BFBFBF
+    urgent_workspace   #FF5555 #FF5555 #F8F8F2
+    binding_mode       #FF5555 #FF5555 #F8F8F2
+  }
+}
+
+bar {
   output VIRTUAL-LEFT
+  position top
+  status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks -c ~/.config/i3blocks/config-left
+  padding 0px 5px 0px 0px
+  tray_output none
+  tray_padding 2px
+  separator_symbol ""
+
+  colors {
+    background #282A36
+    statusline #F8F8F2
+    separator  #44475A
+
+    focused_workspace  #44475A #44475A #F8F8F2
+    active_workspace   #282A36 #44475A #F8F8F2
+    inactive_workspace #282A36 #282A36 #BFBFBF
+    urgent_workspace   #FF5555 #FF5555 #F8F8F2
+    binding_mode       #FF5555 #FF5555 #F8F8F2
+  }
+}
+
+bar {
+  output VIRTUAL-PBP-RIGHT
   position top
   status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks -c ~/.config/i3blocks/config-left
   padding 0px 5px 0px 0px
