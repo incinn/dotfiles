@@ -50,6 +50,9 @@ bindsym $mod+q kill
 # Start rofi
 bindsym $mod+d exec --no-startup-id rofi -show drun
 
+# Bind display options menu
+bindsym $mod+0 exec $HOME/.config/i3/monitor_dmenu.sh
+
 # Change focus
 # bindsym $mod+j focus left
 # bindsym $mod+k focus down
@@ -111,7 +114,7 @@ bindsym $mod+6 workspace number $ws6
 bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
+#bindsym $mod+0 workspace number $ws10
 
 # Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -123,7 +126,7 @@ bindsym $mod+Shift+6 move container to workspace number $ws6
 bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
+#bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload
