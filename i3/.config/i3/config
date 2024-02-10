@@ -5,7 +5,7 @@ set $mod Mod4
 font pango:JetBrainsMono Nerd Font 9
 
 # Run custom monitor setup script
-exec --no-startup-id ~/.config/i3/monitors.sh
+exec --no-startup-id ~/.config/i3/monitors.sh -w
 
 # Disable display power management and screen blanking
 # https://wiki.archlinux.org/title/Display_Power_Management_Signaling
