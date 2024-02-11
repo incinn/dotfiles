@@ -1,23 +1,15 @@
-# About
-My dotfiles. Configuration for my linux environment.
+# Dotfiles
+
+Various dotfiles for my Linux environment.
 
 ![screenshot](./screenshot.png)
 
-# Dependencies
-```bash
-yay -S stow git ueberzug i3 i3blocks
-```
+## Stow
 
-# Stow
-Clone directory into `~/.dotfiles`
+Dotfiles are managed by [GNU Stow](https://www.gnu.org/software/stow/).
 
-```bash
-stow *
-```
+## Usage
 
-Or for an individual application you can stow a single directory (i3 for example):
-
-```bash
-stow i3
-```
-
+1. Clone directory into `~/.dotfiles`
+2. Use `stow *` to manage symlinks between `~/.dotfiles` and `~/.config`
+3. Or if you only care about specific dotfiles: `stow <dir_name>`
