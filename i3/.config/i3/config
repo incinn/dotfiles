@@ -4,6 +4,9 @@ set $mod Mod4
 # Set font
 font pango:JetBrainsMono Nerd Font 9
 
+# Set keyboard locale with alt+shift toggle
+exec --no-startup-id setxkbmap -model pc105 -layout gb,us -option grp:alt_shift_toggle
+
 # Run custom monitor setup script
 exec --no-startup-id ~/.config/i3/monitors.sh -w
 
