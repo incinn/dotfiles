@@ -268,7 +268,7 @@ bar {
   position top
   status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks -c ~/.config/i3blocks/config-left
   padding 0px 5px 0px 0px
-  tray_output none
+  tray_output VIRTUAL-PBP-RIGHT
   tray_padding 2px
   separator_symbol ""
 
