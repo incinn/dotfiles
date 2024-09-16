@@ -45,6 +45,12 @@
 ;; Projectile configuration
 (setq projectile-project-search-path '("~/Projects"))
 
+;; Saves timestamp of when todo item completed
+(setq org-log-done 'time)
+
+(setq counsel-projectile-preview-buffers 'true)
+(setq counsel-switch-buffer-preview-virtual-buffers 'true)
+
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
