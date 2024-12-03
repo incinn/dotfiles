@@ -162,22 +162,21 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# https://draculatheme.com/i3
-# class                 border  bground text    indicator child_border
-client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
-client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
-client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
-client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
-client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282a36
-
-client.background       #F8F8F2
-
 hide_edge_borders both
 
 # force floating
 for_window [class="^steam_app.*"] floating enable
 
-# Bar definitions for virtual monitors
+# bar variables
+set $bg-color             #000000
+set $inactive-bg-color    #000000
+set $text-color           #ffffff
+set $inactive-text-color  #a9a9a9
+set $urgent-bg-color      #d2042d
+set $urgent-text-color    #ffffff
+set $separator_symbol     " "
+
+# bar definitions
 bar {
   output VIRTUAL-CENTER
   position top
@@ -185,18 +184,16 @@ bar {
   padding 0px 5px 0px 0px
   tray_output none
   tray_padding 2px
-  separator_symbol ""
+  separator_symbol $separator_symbol
 
   colors {
-    background #282A36
-    statusline #F8F8F2
-    separator  #44475A
+    background $bg-color
+    statusline $text-color
+    separator $inactive-bg-color
 
-    focused_workspace  #44475A #44475A #F8F8F2
-    active_workspace   #282A36 #44475A #F8F8F2
-    inactive_workspace #282A36 #282A36 #BFBFBF
-    urgent_workspace   #FF5555 #FF5555 #F8F8F2
-    binding_mode       #FF5555 #FF5555 #F8F8F2
+    focused_workspace  $bg-text-color $bg-color $text-color
+    inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+    urgent_workspace $urgent-bg-color $urgent-bg-color $urgent-text-color
   }
 }
 
@@ -207,18 +204,16 @@ bar {
   padding 0px 5px 0px 0px
   tray_output none
   tray_padding 2px
-  separator_symbol ""
+  separator_symbol $separator_symbol
 
   colors {
-    background #282A36
-    statusline #F8F8F2
-    separator  #44475A
+    background $bg-color
+    statusline $text-color
+    separator $inactive-bg-color
 
-    focused_workspace  #44475A #44475A #F8F8F2
-    active_workspace   #282A36 #44475A #F8F8F2
-    inactive_workspace #282A36 #282A36 #BFBFBF
-    urgent_workspace   #FF5555 #FF5555 #F8F8F2
-    binding_mode       #FF5555 #FF5555 #F8F8F2
+    focused_workspace  $bg-text-color $bg-color $text-color
+    inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+    urgent_workspace $urgent-bg-color $urgent-bg-color $urgent-text-color
   }
 }
 
@@ -229,18 +224,16 @@ bar {
   padding 0px 5px 0px 0px
   tray_output none
   tray_padding 2px
-  separator_symbol ""
+  separator_symbol $separator_symbol
 
   colors {
-    background #282A36
-    statusline #F8F8F2
-    separator  #44475A
+    background $bg-color
+    statusline $text-color
+    separator $inactive-bg-color
 
-    focused_workspace  #44475A #44475A #F8F8F2
-    active_workspace   #282A36 #44475A #F8F8F2
-    inactive_workspace #282A36 #282A36 #BFBFBF
-    urgent_workspace   #FF5555 #FF5555 #F8F8F2
-    binding_mode       #FF5555 #FF5555 #F8F8F2
+    focused_workspace  $bg-text-color $bg-color $text-color
+    inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+    urgent_workspace $urgent-bg-color $urgent-bg-color $urgent-text-color
   }
 }
 
@@ -251,18 +244,16 @@ bar {
   padding 0px 5px 0px 0px
   tray_output none
   tray_padding 2px
-  separator_symbol ""
+  separator_symbol $separator_symbol
 
   colors {
-    background #282A36
-    statusline #F8F8F2
-    separator  #44475A
+    background $bg-color
+    statusline $text-color
+    separator $inactive-bg-color
 
-    focused_workspace  #44475A #44475A #F8F8F2
-    active_workspace   #282A36 #44475A #F8F8F2
-    inactive_workspace #282A36 #282A36 #BFBFBF
-    urgent_workspace   #FF5555 #FF5555 #F8F8F2
-    binding_mode       #FF5555 #FF5555 #F8F8F2
+    focused_workspace  $bg-text-color $bg-color $text-color
+    inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+    urgent_workspace $urgent-bg-color $urgent-bg-color $urgent-text-color
   }
 }
 
@@ -273,18 +264,16 @@ bar {
   padding 0px 5px 0px 0px
   tray_output VIRTUAL-PBP-RIGHT
   tray_padding 2px
-  separator_symbol ""
+  separator_symbol $separator_symbol
 
   colors {
-    background #282A36
-    statusline #F8F8F2
-    separator  #44475A
+    background $bg-color
+    statusline $text-color
+    separator $inactive-bg-color
 
-    focused_workspace  #44475A #44475A #F8F8F2
-    active_workspace   #282A36 #44475A #F8F8F2
-    inactive_workspace #282A36 #282A36 #BFBFBF
-    urgent_workspace   #FF5555 #FF5555 #F8F8F2
-    binding_mode       #FF5555 #FF5555 #F8F8F2
+    focused_workspace  $bg-text-color $bg-color $text-color
+    inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+    urgent_workspace $urgent-bg-color $urgent-bg-color $urgent-text-color
   }
 }
 
@@ -295,17 +284,15 @@ bar {
   padding 0px 5px 0px 0px
   tray_output VIRTUAL-RIGHT
   tray_padding 2px
-  separator_symbol ""
+  separator_symbol $separator_symbol
 
   colors {
-    background #282A36
-    statusline #F8F8F2
-    separator  #44475A
+    background $bg-color
+    statusline $text-color
+    separator $inactive-bg-color
 
-    focused_workspace  #44475A #44475A #F8F8F2
-    active_workspace   #282A36 #44475A #F8F8F2
-    inactive_workspace #282A36 #282A36 #BFBFBF
-    urgent_workspace   #FF5555 #FF5555 #F8F8F2
-    binding_mode       #FF5555 #FF5555 #F8F8F2
+    focused_workspace  $bg-text-color $bg-color $text-color
+    inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+    urgent_workspace $urgent-bg-color $urgent-bg-color $urgent-text-color
   }
 }
