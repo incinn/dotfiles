@@ -4,6 +4,9 @@ set $mod Mod4
 # Set font
 font pango:JetBrainsMono Nerd Font 9
 
+# Start gnome-polkit
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
 # Set keyboard locale with alt+shift toggle
 exec --no-startup-id setxkbmap -model pc105 -layout gb,us -option grp:alt_shift_toggle
 
