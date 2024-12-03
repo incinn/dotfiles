@@ -88,30 +88,20 @@
 (setq-hook! 'js-mode-hook +format-with :none)
 (add-hook 'js-mode-hook 'prettier-js-mode)
 
-(use-package! lsp-mode
-  :commands (lsp lsp-deferred)
-  :hook ((typescript-mode . lsp-deferred)
-         (html-mode . lsp-deferred)
-         (css-mode . lsp-deferred)
-         (scss-mode . lsp-deferred))
-  :config
-  ;; Function to set up Angular Language Server with local paths
-  (defun setup-local-angular-lsp ()
-    (let* ((project-root (lsp-workspace-root))
-           (ngls-path (expand-file-name "node_modules/@angular/language-server/index.js" project-root))
-           (tsserverlib-path (expand-file-name "node_modules/typescript/lib/tsserverlibrary.js" project-root))
-           (node-modules-path (expand-file-name "node_modules" project-root))
-           (ngserver-command `("node"
-                               ,ngls-path
-                               "--ngProbeLocations"
-                               ,node-modules-path
-                               "--tsProbeLocations"
-                               ,node-modules-path
-                               "--stdio"
-                               "--tsProbeLocations"
-                               ,tsserverlib-path)))
-      ;; Override the default TypeScript server command
-      (setq lsp-clients-typescript-server-command ngserver-command)))
-
-  ;; Attach the setup function to typescript-mode
-  (add-hook 'typescript-mode-hook 'setup-local-angular-lsp))
+;; redefine lsp-clients-angular-language-server-command variable to look
+;; for locally (to the project) installed language server
+(after! lsp-mode
+  (setq lsp-clients-angular-language-server-command
+        `("node"
+          ,(expand-file-name "node_modules/@angular/language-server/index.js"
+                             (or (locate-dominating-file default-directory "package.json")
+                                 (user-error "No package.json found in project root")))
+          "--stdio"
+          "--tsProbeLocations"
+          ,(expand-file-name "node_modules"
+                             (or (locate-dominating-file default-directory "package.json")
+                                 (user-error "No package.json found in project root")))
+          "--ngProbeLocations"
+          ,(expand-file-name "node_modules"
+                             (or (locate-dominating-file default-directory "package.json")
+                                 (user-error "No package.json found in project root"))))))
