@@ -1,0 +1,38 @@
+[keyboard]
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "Return"
+mods = "Control|Shift"
+
+[general]
+import = ["~/.config/alacritty/nord.toml"]
+
+[font]
+size = 9.0
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[window]
+blur = false
+decorations = "none"
+opacity = 0.9
+dynamic_padding = true
+
+[window.padding]
+x = 10
+y = 10
+
