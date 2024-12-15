@@ -48,3 +48,6 @@ alias n="nvim"
 
 source /usr/share/nvm/init-nvm.sh
 
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
