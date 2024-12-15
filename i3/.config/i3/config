@@ -8,7 +8,7 @@ font pango:JetBrainsMono Nerd Font 9
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Set keyboard locale with alt+shift toggle
-exec --no-startup-id setxkbmap -model pc105 -layout gb,us -option grp:alt_shift_toggle
+exec --no-startup-id setxkbmap -model pc105 -layout gb,us -option grp:alt_p_toggle
 
 # Run custom monitor setup script
 exec --no-startup-id ~/.config/i3/monitors.sh -w
@@ -44,8 +44,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # Remove titlebar
-default_border pixel 1
-default_floating_border pixel 1
+default_border pixel 0
+default_floating_border pixel 0
 
 # Run i3lock
 bindsym $mod+l exec i3lock -c 282a36 -f
@@ -167,26 +167,31 @@ bindsym $mod+r mode "resize"
 
 hide_edge_borders both
 
+# gaps
+gaps inner 7px
+gaps outer 0px
+smart_gaps off
+
 # force floating
 for_window [class="^steam_app.*"] floating enable
 
 # bar variables
-set $bg-color             #000000
-set $inactive-bg-color    #000000
-set $text-color           #ffffff
-set $inactive-text-color  #a9a9a9
-set $urgent-bg-color      #d2042d
-set $urgent-text-color    #ffffff
+set $bg-color             #2e3440BF
+set $inactive-bg-color    #2e3440BF
+set $text-color           #d8dee9FF
+set $inactive-text-color  #798eb4FF
+set $urgent-bg-color      #bf616aFF
+set $urgent-text-color    #eceff4FF
 set $separator_symbol     " "
 
 # bar definitions
 bar {
+  i3bar_command i3bar --transparency
   output VIRTUAL-CENTER
   position top
   status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks
-  padding 0px 5px 0px 0px
+  padding 0px 15px 0px 10px
   tray_output none
-  tray_padding 2px
   separator_symbol $separator_symbol
 
   colors {
@@ -194,19 +199,20 @@ bar {
     statusline $text-color
     separator $inactive-bg-color
 
-    focused_workspace  $bg-text-color $bg-color $text-color
+    focused_workspace $bg-color $bg-color $text-color
+    active_workspace $bg-color $bg-color $text-color
     inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
     urgent_workspace $urgent-bg-color $urgent-bg-color $urgent-text-color
   }
 }
 
 bar {
+  i3bar_command i3bar --transparency
   output VIRTUAL-PBP-LEFT
   position top
   status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks
-  padding 0px 5px 0px 0px
+  padding 0px 15px 0px 10px
   tray_output none
-  tray_padding 2px
   separator_symbol $separator_symbol
 
   colors {
@@ -214,19 +220,20 @@ bar {
     statusline $text-color
     separator $inactive-bg-color
 
-    focused_workspace  $bg-text-color $bg-color $text-color
+    focused_workspace $bg-color $bg-color $text-color
+    active_workspace $bg-color $bg-color $text-color
     inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
     urgent_workspace $urgent-bg-color $urgent-bg-color $urgent-text-color
   }
 }
 
 bar {
+  i3bar_command i3bar --transparency
   output VIRTUAL-PBP
   position top
   status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks
-  padding 0px 5px 0px 0px
+  padding 0px 15px 0px 10px
   tray_output none
-  tray_padding 2px
   separator_symbol $separator_symbol
 
   colors {
@@ -234,19 +241,20 @@ bar {
     statusline $text-color
     separator $inactive-bg-color
 
-    focused_workspace  $bg-text-color $bg-color $text-color
+    focused_workspace $bg-color $bg-color $text-color
+    active_workspace $bg-color $bg-color $text-color
     inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
     urgent_workspace $urgent-bg-color $urgent-bg-color $urgent-text-color
   }
 }
 
 bar {
+  i3bar_command i3bar --transparency
   output VIRTUAL-LEFT
   position top
   status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks -c ~/.config/i3blocks/config-left
-  padding 0px 5px 0px 0px
+  padding 0px 15px 0px 10px
   tray_output none
-  tray_padding 2px
   separator_symbol $separator_symbol
 
   colors {
@@ -254,19 +262,21 @@ bar {
     statusline $text-color
     separator $inactive-bg-color
 
-    focused_workspace  $bg-text-color $bg-color $text-color
+    focused_workspace $bg-color $bg-color $text-color
+    active_workspace $bg-color $bg-color $text-color
     inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
     urgent_workspace $urgent-bg-color $urgent-bg-color $urgent-text-color
   }
 }
 
 bar {
+  i3bar_command i3bar --transparency
   output VIRTUAL-PBP-RIGHT
   position top
   status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks -c ~/.config/i3blocks/config-left
-  padding 0px 5px 0px 0px
+  padding 0px 5px 0px 10px
   tray_output VIRTUAL-PBP-RIGHT
-  tray_padding 2px
+  tray_padding 5px
   separator_symbol $separator_symbol
 
   colors {
@@ -274,19 +284,21 @@ bar {
     statusline $text-color
     separator $inactive-bg-color
 
-    focused_workspace  $bg-text-color $bg-color $text-color
+    focused_workspace $bg-color $bg-color $text-color
+    active_workspace $bg-color $bg-color $text-color
     inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
     urgent_workspace $urgent-bg-color $urgent-bg-color $urgent-text-color
   }
 }
 
 bar {
+  i3bar_command i3bar --transparency
   output VIRTUAL-RIGHT
   position top
   status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks -c ~/.config/i3blocks/config-right
-  padding 0px 5px 0px 0px
+  padding 0px 15px 0px 10px
   tray_output VIRTUAL-RIGHT
-  tray_padding 2px
+  tray_padding 5px
   separator_symbol $separator_symbol
 
   colors {
@@ -294,7 +306,8 @@ bar {
     statusline $text-color
     separator $inactive-bg-color
 
-    focused_workspace  $bg-text-color $bg-color $text-color
+    focused_workspace $bg-color $bg-color $text-color
+    active_workspace $bg-color $bg-color $text-color
     inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
     urgent_workspace $urgent-bg-color $urgent-bg-color $urgent-text-color
   }
