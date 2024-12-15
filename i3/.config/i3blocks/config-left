@@ -30,10 +30,9 @@ command=$SCRIPT_DIR/$BLOCK_NAME
 separator_block_width=20
 markup=none
 
-[bandwidth]
-interval=2
-INLABEL= 
-OUTLABEL= 
+[bandwidth2]
+interval=persist
+markup=pango
 
 [memory]
 label= 
