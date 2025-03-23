@@ -90,18 +90,43 @@
 
 ;; redefine lsp-clients-angular-language-server-command variable to look
 ;; for locally (to the project) installed language server
+;; (after! lsp-mode
+;;   (setq lsp-clients-angular-language-server-command
+;;         `("node"
+;;           ,(expand-file-name "node_modules/@angular/language-server/index.js"
+;;                              (or (locate-dominating-file default-directory "package.json")
+;;                                  (user-error "No package.json found in project root")))
+;;           "--stdio"
+;;           "--tsProbeLocations"
+;;           ,(expand-file-name "node_modules"
+;;                              (or (locate-dominating-file default-directory "package.json")
+;;                                  (user-error "No package.json found in project root")))
+;;           "--ngProbeLocations"
+;;           ,(expand-file-name "node_modules"
+;;                              (or (locate-dominating-file default-directory "package.json")
+;;                                  (user-error "No package.json found in project root"))))))
+
+
 (after! lsp-mode
   (setq lsp-clients-angular-language-server-command
         `("node"
           ,(expand-file-name "node_modules/@angular/language-server/index.js"
-                             (or (locate-dominating-file default-directory "package.json")
-                                 (user-error "No package.json found in project root")))
+                             (locate-dominating-file (or buffer-file-name default-directory) "package.json"))
           "--stdio"
           "--tsProbeLocations"
           ,(expand-file-name "node_modules"
-                             (or (locate-dominating-file default-directory "package.json")
-                                 (user-error "No package.json found in project root")))
+                             (locate-dominating-file (or buffer-file-name default-directory) "package.json"))
           "--ngProbeLocations"
           ,(expand-file-name "node_modules"
-                             (or (locate-dominating-file default-directory "package.json")
-                                 (user-error "No package.json found in project root"))))))
+                             (locate-dominating-file (or buffer-file-name default-directory) "package.json"))))
+
+  (lsp-register-client
+   (make-lsp-client
+    :new-connection (lsp-stdio-connection (lambda () lsp-clients-angular-language-server-command))
+    :major-modes '(typescript-mode html-mode)
+    :server-id 'angular-ls
+    :activation-fn (lsp-activate-on ".*\\.html\\|\\.ts$"))))
+
+;; make pyright aware of .venv directory
+(after! lsp-pyright
+  (setq lsp-pyright-venv-path (expand-file-name ".venv" (projectile-project-root))))
