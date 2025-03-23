@@ -29,7 +29,7 @@ style = "Regular"
 [window]
 blur = false
 decorations = "none"
-opacity = 0.9
+opacity = 1
 dynamic_padding = true
 
 [window.padding]
