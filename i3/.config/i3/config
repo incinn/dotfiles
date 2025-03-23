@@ -168,7 +168,7 @@ bindsym $mod+r mode "resize"
 hide_edge_borders both
 
 # gaps
-gaps inner 7px
+gaps inner 0px
 gaps outer 0px
 smart_gaps off
 
