@@ -51,7 +51,7 @@ default_floating_border pixel 0
 bindsym $mod+l exec i3lock --color=000000 --show-failed-attempts --ignore-empty-password --pointer=win
 
 # Start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 # Kill focused window
 bindsym $mod+q kill
