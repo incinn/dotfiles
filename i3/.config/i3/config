@@ -48,7 +48,7 @@ default_border pixel 0
 default_floating_border pixel 0
 
 # Run i3lock
-bindsym $mod+l exec i3lock -c 282a36 -f
+bindsym $mod+l exec i3lock --color=000000 --show-failed-attempts --ignore-empty-password --pointer=win
 
 # Start a terminal
 bindsym $mod+Return exec alacritty
