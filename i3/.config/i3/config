@@ -16,6 +16,7 @@ exec --no-startup-id ~/.config/i3/monitors.sh -w
 # Configure mice
 exec --no-startup-id ~/.config/i3/kensington_expert.sh
 exec --no-startup-id ~/.config/i3/g_pro.sh
+exec --no-startup-id ~/.config/i3/mx_ergo.sh
 
 # Disable display power management and screen blanking
 # https://wiki.archlinux.org/title/Display_Power_Management_Signaling
